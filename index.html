@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tea | Official Artist Hub</title>
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <meta name="description" content="Welcome to the official hub of Tea. Stream the new album ECLIPSE, view tour dates, watch music videos, read the bio, and buy official merch.">
+  <meta name="keywords" content="Tea, music artist, dark pop, electronic music, synthwave, ECLIPSE album, tour dates, official hub">
+  <meta property="og:title" content="Tea | Official Artist Hub">
+  <meta property="og:description" content="Stream the new album ECLIPSE, view tour dates, and explore the immersive world of Tea.">
+  <meta property="og:image" content="assets/eclipse_album_cover.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for Streaming / Socials -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="site-loader" class="active">
+  <img src="assets/logo.png" alt="TEA Loading" class="loading-logo flash">
+</div>
+  <script>
+    setTimeout(() => {
+      const loader = document.getElementById("site-loader");
+      if (loader) loader.classList.remove("active");
+    }, 1000);
+  </script>
+
+  <!-- Custom Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
+
+  <!-- Header / Navigation -->
+  <header id="main-header" class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" id="nav-logo"><img src="assets/logo.png" alt="ON AIR" style="height: 160px; vertical-align: middle;"></a>
+      
+      <nav class="desktop-nav" id="desktop-nav">
+        <a href="index.html" class="nav-link">Music</a>
+        <a href="videos.html" class="nav-link">Videos</a>
+        <a href="bio.html" class="nav-link">Bio</a>
+        <a href="photos.html" class="nav-link">Photos</a>
+      </nav>
+
+            <div class="social-icons">
+        <a href="https://tiktok.com/@teaairs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/teaairs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/teaonair" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/@Teaairs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://soundcloud.com/teaonair" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-dropdown" id="mobile-dropdown">
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Music</a>
+      <a href="videos.html" class="mobile-nav-link">Videos</a>
+      <a href="bio.html" class="mobile-nav-link">Bio</a>
+      <a href="photos.html" class="mobile-nav-link">Photos</a>
+    </nav>
+        <div class="mobile-socials">
+      <a href="https://tiktok.com/@teaairs" class="social-icon"><i class="fab fa-tiktok"></i></a>
+      <a href="https://instagram.com/teaairs" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://teaonair.com" class="social-icon"><i class="fas fa-globe"></i></a>
+      <a href="https://www.youtube.com/@Teaairs" class="social-icon"><i class="fab fa-youtube"></i></a>
+      <a href="https://soundcloud.com/teaonair" class="social-icon"><i class="fab fa-soundcloud"></i></a>
+      <a href="https://x.com/teaonair" class="social-icon"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div><!-- Latest Release & Custom Music Player -->
+  <section id="music" class="section music-section">
+    <div class="container">
+      
+      <div class="release-grid">
+        <!-- Album Details -->
+        <div class="release-card glass-card">
+          <div class="release-cover-wrapper">
+            <img src="assets/vibe_lit_cover.png" alt="KEEP THE VIBE LIT Album Cover" class="release-cover" id="album-cover-img">
+          </div>
+          <div class="release-info">
+            <h3 class="release-name">KEEP THE VIBE LIT</h3>
+            <p class="release-artist">By Tea &amp; KayTOOWAVY</p>
+            <p class="release-meta">Released 6th July 2021</p>
+            
+            <div class="streaming-links">
+              <a href="https://open.spotify.com/track/1YS2tI17qriwyfXfqdGBRe?si=51279ae2782f422e" class="stream-btn spotify-btn" target="_blank" rel="noopener">
+                <i class="fab fa-spotify"></i> Spotify
+              </a>
+              <a href="https://music.apple.com/us/song/keep-the-vibe-lit-feat-too/1756423473" class="stream-btn apple-btn" target="_blank" rel="noopener">
+                <i class="fab fa-apple"></i> Apple Music
+              </a>
+              <a href="https://soundcloud.com/teaonair/keep-the-vibe-lit" class="stream-btn soundcloud-btn" target="_blank" rel="noopener">
+                <i class="fab fa-soundcloud"></i> Soundcloud
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Interactive Audio Player -->
+        <div class="player-column-wrapper" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <div class="player-card glass-card" id="player-container">
+          <div class="player-header">
+            <h4>Tea Audio System</h4>
+          </div>
+
+          <div class="player-now-playing">
+            <div class="mini-cover">
+              <img src="assets/vibe_lit_cover.png" alt="Now Playing Cover" id="player-mini-cover">
+            </div>
+            <div class="track-details">
+              <span class="track-title" id="player-track-title">Keep The Vibe Lit</span>
+              <span class="track-artist" id="player-track-artist">Tea • KEEP THE VIBE LIT</span>
+            </div>
+          </div>
+
+          <!-- Custom Audio Synthesizer Waveform Anim -->
+          <div class="player-controls-wrapper">
+            <div class="player-time-info">
+              <span class="current-time" id="player-current-time">0:00</span>
+              <div class="timeline-slider" id="player-timeline-slider">
+                <div class="timeline-progress" id="player-timeline-progress"></div>
+                <div class="timeline-handle" id="player-timeline-handle"></div>
+              </div>
+              <span class="total-duration" id="player-total-duration">3:12</span>
+            </div>
+
+            <div class="player-buttons">
+              <button class="player-btn" id="player-prev-btn" aria-label="Previous Track"><i class="fas fa-backward"></i></button>
+              <button class="player-btn play-btn" id="player-play-btn" aria-label="Play / Pause"><i class="fas fa-play"></i></button>
+              <button class="player-btn" id="player-next-btn" aria-label="Next Track"><i class="fas fa-forward"></i></button>
+            </div>
+
+            <div class="player-volume-wrapper">
+              <i class="fas fa-volume-up" id="volume-icon"></i>
+              <div class="volume-slider" id="player-volume-slider">
+                <div class="volume-progress" id="player-volume-progress"></div>
+                <div class="volume-handle" id="player-volume-handle"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="waveform-container" id="waveform-visualizer">
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+          </div>
+        </div>
+          
+        <!-- Playlist -->
+        <div class="player-playlist player-card glass-card">
+          <div class="playlist-header">Track List</div>
+          <ul class="playlist-tracks" id="playlist-tracks">
+            <li class="track-item active" data-index="0" data-src="vibe_lit" data-duration="0:00">
+              <span class="track-number">01</span>
+              <span class="track-name">Keep The Vibe Lit</span>
+              <span class="track-len" id="vibe-lit-dur">0:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  
+
+
+
+
+
+
+
+<footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-logo">Tea</span>
+        <p class="footer-copyright">&copy; 2026 Tea. All Rights Reserved. Designed by Antigravity.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="index.html">Music</a>
+          <a href="videos.html">Videos</a>
+          <a href="bio.html">Biography</a>
+        </div>
+                <div class="footer-socials">
+          <a href="https://tiktok.com/@teaairs" class="footer-icon"><i class="fab fa-tiktok"></i></a>
+          <a href="https://instagram.com/teaairs" class="footer-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://teaonair.com" class="footer-icon"><i class="fas fa-globe"></i></a>
+          <a href="https://www.youtube.com/@Teaairs" class="footer-icon"><i class="fab fa-youtube"></i></a>
+          <a href="https://soundcloud.com/teaonair" class="footer-icon"><i class="fab fa-soundcloud"></i></a>
+          <a href="https://x.com/teaonair" class="footer-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js?v=2"></script>
+</body>
+</html>
