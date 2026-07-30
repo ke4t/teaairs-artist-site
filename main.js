@@ -21,7 +21,7 @@ let bpm = 110;
 
 // Track Metadata
 const trackList = [
-  { id: "vibe_lit", title: "Keep The Vibe Lit", durationStr: "0:00", src: encodeURI("assets/keep the vibe lit.mp3") }
+  { id: "heartbreak_kid", title: "Heartbreak Kid", durationStr: "0:00", src: encodeURI("assets/HEARTBREAK_KID.mp3") }
 ];
 
 // Photo Gallery Metadata
@@ -136,7 +136,7 @@ const volumeSlider = document.getElementById("player-volume-slider");
 const volumeProgress = document.getElementById("player-volume-progress");
 const volumeHandle = document.getElementById("player-volume-handle");
 
-let globalAudio = new Audio("assets/vibe_lit.mp3");
+let globalAudio = new Audio("assets/HEARTBREAK_KID.mp3");
 globalAudio.volume = 0.8;
 
 if (playBtn) {
