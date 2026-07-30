@@ -210,17 +210,7 @@
           </div>
         </div>
           
-        <!-- Playlist -->
-        <div class="player-playlist player-card glass-card">
-          <div class="playlist-header">Track List</div>
-          <ul class="playlist-tracks" id="playlist-tracks">
-            <li class="track-item active" data-index="0" data-src="heartbreak_kid" data-duration="0:00">
-              <span class="track-number">01</span>
-              <span class="track-name">Heartbreak Kid</span>
-              <span class="track-len" id="vibe-lit-dur">0:00</span>
-            </li>
-          </ul>
-        </div>
+
       </div>
     </div>
   </div>
@@ -260,5 +250,19 @@
   </footer>
 
   <script src="main.js?v=2"></script>
+
+  <!-- Email Signup Modal -->
+  <div class="email-modal-overlay" id="email-modal">
+    <div class="email-modal-card glass-card">
+      <button class="email-modal-close" id="email-close-btn">&times;</button>
+      <h2 class="email-modal-title">Enter Tea's World</h2>
+      <p class="email-modal-text">Instant notifications to new releases, tour dates & exclusive content</p>
+      <form class="email-form" id="email-form">
+        <input type="email" class="email-input" placeholder="Your Email Address" required>
+        <button type="submit" class="email-submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>

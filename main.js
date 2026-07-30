@@ -669,7 +669,7 @@ if (btnCheckout) {
         
         setTimeout(() => {
           toast.className = "toast";
-        }, 5000);
+        }, 2000);
       }
       
       setTimeout(() => {
@@ -717,7 +717,7 @@ if (contactForm && contactSubmitBtn) {
         
         setTimeout(() => {
           toast.className = "toast";
-        }, 5000);
+        }, 2000);
       }
     }, 1200);
   });
@@ -759,6 +759,63 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         window.location.href = navLogo.getAttribute("href") || "index.html";
       }
+    });
+  }
+});
+
+// --- EMAIL POPUP MODAL ---
+document.addEventListener("DOMContentLoaded", () => {
+  const emailModal = document.getElementById("email-modal");
+  const emailCloseBtn = document.getElementById("email-close-btn");
+  const emailForm = document.getElementById("email-form");
+
+  if (emailModal && emailCloseBtn && emailForm) {
+    // Check if user has already seen or closed it
+    let hasSeenPopup = false;
+    try {
+      hasSeenPopup = localStorage.getItem("tea_email_popup_seen");
+    } catch (e) {
+      console.warn("localStorage not available, probably local file protocol.");
+    }
+
+    if (true) { // Temporary override for testing
+      setTimeout(() => {
+        emailModal.classList.add("active");
+      }, 2000);
+    }
+
+    const closePopup = () => {
+      emailModal.classList.remove("active");
+      try {
+        localStorage.setItem("tea_email_popup_seen", "true");
+      } catch (e) {}
+    };
+
+    emailCloseBtn.addEventListener("click", closePopup);
+
+    emailModal.addEventListener("click", (e) => {
+      if (e.target === emailModal) {
+        closePopup();
+      }
+    });
+
+    emailForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // Normally you would send the data to a server here.
+      // For now, just close and save state.
+      const submitBtn = emailForm.querySelector(".email-submit");
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Subscribed!";
+      submitBtn.style.background = "#fff";
+      submitBtn.style.boxShadow = "0 0 15px #fff";
+      
+      setTimeout(() => {
+        closePopup();
+        submitBtn.textContent = originalText;
+        submitBtn.style.background = "";
+        submitBtn.style.boxShadow = "";
+        emailForm.reset();
+      }, 1500);
     });
   }
 });
