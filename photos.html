@@ -1,20 +1,21 @@
+<!-- PUBLISH 2 VIDEO MEDIA BOXES V3000 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tea | Official Artist Hub</title>
+  <title>Media — TEA | Official Artist Hub</title>
   
-  <!-- SEO & OpenGraph Meta Tags -->
-  <meta name="description" content="Welcome to the official hub of Tea. Stream the new album ECLIPSE, view tour dates, watch music videos, read the bio, and buy official merch.">
-  <meta name="keywords" content="Tea, music artist, dark pop, electronic music, synthwave, ECLIPSE album, tour dates, official hub">
-  <meta property="og:title" content="Tea | Official Artist Hub">
-  <meta property="og:description" content="Stream the new album ECLIPSE, view tour dates, and explore the immersive world of Tea.">
-  <meta property="og:image" content="assets/eclipse_album_cover.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Media — TEA | Official Artist Hub">
+  <meta name="description" content="Exclusive video & visual media from TEA.">
+  <meta name="theme-color" content="#0a0a0a">
   
-  <!-- Google Fonts -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  
+  <!-- Google Fonts: Space Mono & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -23,36 +24,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css?v=20">
+  <link rel="stylesheet" href="style.css?v=3000">
 </head>
 <body>
   <div id="site-loader" class="active">
-  <img src="assets/logo.png" alt="TEA Loading" class="loading-logo flash">
-</div>
-  <script>
-    setTimeout(() => {
-      const loader = document.getElementById("site-loader");
-      if (loader) loader.classList.remove("active");
-    }, 1000);
-  </script>
+    <img src="assets/logo.png" alt="TEA Loading" class="loading-logo flash">
+  </div>
 
-  <!-- Custom Custom Cursor -->
-  <div id="custom-cursor" class="custom-cursor"></div>
-  <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
+  <!-- Ambient Video / procedural background canvas -->
+  <div class="video-bg-container">
+    <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+    <div class="video-overlay-tint"></div>
+  </div>
 
   <!-- Header / Navigation -->
   <header id="main-header" class="main-header">
     <div class="container header-container">
-      <a href="index.html" class="logo" id="nav-logo"><img src="assets/logo.png" alt="ON AIR" style="height: 160px; vertical-align: middle;"></a>
+      <a href="index.html" class="logo" id="nav-logo"><img src="assets/logo.png" alt="ON AIR" class="nav-logo-img"></a>
       
       <nav class="desktop-nav" id="desktop-nav">
         <a href="index.html" class="nav-link">Music</a>
         <a href="videos.html" class="nav-link">Videos</a>
         <a href="bio.html" class="nav-link">Bio</a>
-        <a href="photos.html" class="nav-link">Photos</a>
+        <a href="photos.html" class="nav-link">Media</a>
       </nav>
 
-            <div class="social-icons">
+      <div class="social-icons">
         <a href="https://tiktok.com/@teaairs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
         <a href="https://instagram.com/teaairs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://x.com/teaonair" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -60,23 +57,24 @@
         <a href="https://soundcloud.com/teaonair" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
       </div>
 
-      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Dropdown Menu -->
-  <div class="mobile-dropdown" id="mobile-dropdown">
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-drawer" id="mobile-drawer">
     <nav class="mobile-nav">
       <a href="index.html" class="mobile-nav-link">Music</a>
       <a href="videos.html" class="mobile-nav-link">Videos</a>
       <a href="bio.html" class="mobile-nav-link">Bio</a>
-      <a href="photos.html" class="mobile-nav-link">Photos</a>
+      <a href="photos.html" class="mobile-nav-link">Media</a>
     </nav>
-        <div class="mobile-socials">
+    <div class="mobile-socials">
       <a href="https://tiktok.com/@teaairs" class="social-icon"><i class="fab fa-tiktok"></i></a>
       <a href="https://instagram.com/teaairs" class="social-icon"><i class="fab fa-instagram"></i></a>
       <a href="https://teaonair.com" class="social-icon"><i class="fas fa-globe"></i></a>
@@ -84,52 +82,39 @@
       <a href="https://soundcloud.com/teaonair" class="social-icon"><i class="fab fa-soundcloud"></i></a>
       <a href="https://x.com/teaonair" class="social-icon"><i class="fab fa-twitter"></i></a>
     </div>
-  </div><!-- Latest Release & Custom Music Player -->
+  </div>
+
+  <!-- Media Section -->
   <section id="photos" class="section photos-section">
     <div class="container">
-      <h2 class="section-title">Photo Gallery</h2>
-      
-      <div class="photos-grid">
-        <!-- Photo 1 -->
-        <div class="photo-card" data-index="0">
-          <div class="photo-placeholder">TBC</div>
+      <div class="photos-grid media-2-grid">
+        <!-- Media Video 1 -->
+        <div class="photo-card glass-card media-card">
+          <video src="assets/media_video_1.mp4" autoplay muted loop playsinline controls class="media-video"></video>
         </div>
 
-        <!-- Photo 2 -->
-        <div class="photo-card" data-index="1">
-          <div class="photo-placeholder">TBC</div>
-        </div>
-
-        <!-- Photo 3 -->
-        <div class="photo-card" data-index="2">
-          <div class="photo-placeholder">TBC</div>
+        <!-- Media Video 2 -->
+        <div class="photo-card glass-card media-card">
+          <video src="assets/media_video_2.mp4" autoplay muted loop playsinline controls class="media-video"></video>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  
-
-
-
-
-
-
-
-<footer class="main-footer">
+  <footer class="main-footer">
     <div class="container footer-container">
       <div class="footer-left">
-        <span class="footer-logo">Tea</span>
-        <p class="footer-copyright">&copy; 2026 Tea. All Rights Reserved. Designed by Antigravity.</p>
+        <img src="assets/logo.png" alt="Tea Logo" class="footer-logo-img">
+        <p class="footer-contact">contact me: <a href="mailto:ttoodotcom@gmail.com" class="footer-contact-link">ttoodotcom@gmail.com</a></p>
       </div>
       <div class="footer-right">
         <div class="footer-links">
           <a href="index.html">Music</a>
           <a href="videos.html">Videos</a>
-          <a href="bio.html">Biography</a>
+          <a href="bio.html">Bio</a>
         </div>
-                <div class="footer-socials">
+        <div class="footer-socials">
           <a href="https://tiktok.com/@teaairs" class="footer-icon"><i class="fab fa-tiktok"></i></a>
           <a href="https://instagram.com/teaairs" class="footer-icon"><i class="fab fa-instagram"></i></a>
           <a href="https://teaonair.com" class="footer-icon"><i class="fas fa-globe"></i></a>
@@ -141,20 +126,20 @@
     </div>
   </footer>
 
-  <script src="main.js?v=20"></script>
+  <script src="main.js?v=3000"></script>
 
   <!-- Email Signup Modal -->
   <div class="email-modal-overlay" id="email-modal">
     <div class="email-modal-card glass-card">
       <button class="email-modal-close" id="email-close-btn">&times;</button>
       <h2 class="email-modal-title">Enter Tea's World</h2>
-      <p class="email-modal-text">Instant notifications to new releases, tour dates & exclusive content</p>
-      <form class="email-form" id="email-form">
-        <input type="email" class="email-input" placeholder="Your Email Address" required>
-        <button type="submit" class="email-submit">Subscribe</button>
+      <p class="email-modal-subtitle">Join the inner circle for exclusive unreleased tracks, tour presales, and secret drops.</p>
+      
+      <form class="email-signup-form" id="email-form">
+        <input type="email" class="email-input" placeholder="enter your email..." required>
+        <button type="submit" class="btn btn-primary email-submit">Join Inner Circle</button>
       </form>
     </div>
   </div>
-
 </body>
 </html>
