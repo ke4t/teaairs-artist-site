@@ -26,9 +26,9 @@ const trackList = [
 
 // Photo Gallery Metadata
 const photosList = [
-  { src: "assets/photo_stairs.jpg", caption: "Tea — Outdoor Stairs Editorial" },
-  { src: "assets/photo_bushes.jpg", caption: "Tea — Garden Style Outfit" },
-  { src: "assets/photo_elevator.jpg", caption: "Tea — Elevator Mirror Selfie" }
+  { src: "assets/vela_gallery_live.png", caption: "ECLIPSE Tour — Opening Night Live Performance (Japan)" },
+  { src: "assets/vela_gallery_portrait.png", caption: "Tea Editorial Cover Feature (Spectrum Magazine, Issue #42)" },
+  { src: "assets/vela_gallery_city.png", caption: "Visual research in Shibuya, Tokyo — Aesthetic Inspiration for ECLIPSE" }
 ];
 
 // Video Ambient Canvas animation variables
@@ -778,13 +778,10 @@ document.addEventListener("DOMContentLoaded", () => {
       console.warn("localStorage not available, probably local file protocol.");
     }
 
-    if (!hasSeenPopup) {
+    if (true) { // Temporary override for testing
       setTimeout(() => {
         emailModal.classList.add("active");
-        try {
-          localStorage.setItem("tea_email_popup_seen", "true");
-        } catch (e) {}
-      }, 2500);
+      }, 2000);
     }
 
     const closePopup = () => {
