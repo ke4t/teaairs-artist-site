@@ -445,12 +445,7 @@ button, input, select, textarea {
   right: 0;
 }
 
-.mobile-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.8rem;
-}
+.mobile-nav { display: none !important; }
 
 .mobile-nav-link {
   font-family: var(--font-heading);
@@ -2469,3 +2464,5 @@ button, input, select, textarea {
 }
 
 .video-bg-container, .video-overlay-tint { display: none !important; }
+
+.mobile-nav, .mobile-nav-link { display: none !important; }
