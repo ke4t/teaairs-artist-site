@@ -396,7 +396,7 @@ button, input, select, textarea {
 }
 
 /* Mobile Nav Toggle */
-.mobile-nav-toggle {
+/* mobile-nav-toggle active */ {
   display: none;
   flex-direction: column;
   gap: 6px;
@@ -404,22 +404,22 @@ button, input, select, textarea {
   z-index: 1100;
 }
 
-.mobile-nav-toggle .bar {
+/* mobile-nav-toggle active */ .bar {
   width: 25px;
   height: 2px;
   background-color: var(--text-main);
   transition: var(--transition-fast);
 }
 
-.mobile-nav-toggle.active .bar:nth-child(1) {
+/* mobile-nav-toggle active */.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.mobile-nav-toggle.active .bar:nth-child(2) {
+/* mobile-nav-toggle active */.active .bar:nth-child(2) {
   opacity: 0;
 }
 
-.mobile-nav-toggle.active .bar:nth-child(3) {
+/* mobile-nav-toggle active */.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
@@ -2073,7 +2073,7 @@ button, input, select, textarea {
     display: none;
   }
 
-  .mobile-nav-toggle {
+  /* mobile-nav-toggle active */ {
     display: flex;
   }
 
@@ -2466,3 +2466,50 @@ button, input, select, textarea {
 .video-bg-container, .video-overlay-tint { display: none !important; }
 
 .mobile-nav, .mobile-nav-link { display: none !important; }
+
+
+/* === MOBILE HAMBURGER TOGGLE RESTORATION === */
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 32px !important;
+    height: 22px !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    z-index: 10001 !important;
+    padding: 0 !important;
+    margin-left: auto !important;
+  }
+
+  .mobile-nav-toggle .bar,
+  .mobile-nav-toggle span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  /* === COVER ART FIT WITHIN BOX ON MOBILE VIEW === */
+  .release-cover-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: 420px !important;
+    aspect-ratio: 1 / 1 !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background: #0a0a0a !important;
+  }
+
+  .release-cover {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    background: #0a0a0a !important;
+  }
+}

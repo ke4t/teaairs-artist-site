@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // --- MOBILE NAVIGATION ---
-const mobileNavToggle = document.getElementById("mobile-nav-toggle");
-const mobileDropdown = document.getElementById("mobile-dropdown");
+const mobileNavToggle = document.getElementById("mobile-nav-toggle") || document.getElementById("mobile-toggle");
+const mobileDropdown = document.getElementById("mobile-dropdown") || document.getElementById("mobile-drawer");
 const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
 if (mobileNavToggle && mobileDropdown) {
