@@ -1869,8 +1869,8 @@ button, input, select, textarea {
 .main-footer {
   background: #04010b;
   border-top: 1px solid rgba(255, 0, 51, 0.08);
-  padding: 2.5rem 0 3rem 0;
-  margin-top: -1.5rem;
+  padding: 1.5rem 0 2.5rem 0;
+  margin-top: -2.8rem;
   position: relative;
   z-index: 2;
 }
@@ -1889,6 +1889,7 @@ button, input, select, textarea {
   justify-content: center;
   gap: 0.2rem;
   max-width: 400px;
+  transform: translateY(-12px);
 }
 
 .footer-logo-img {
