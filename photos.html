@@ -11,10 +11,10 @@
   <meta name="theme-color" content="#0a0a0a">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo.png?v=24000">
-  <link rel="icon" type="image/x-icon" href="favicon.ico?v=24000">
-  <link rel="shortcut icon" type="image/png" href="assets/logo.png?v=24000">
-  <link rel="apple-touch-icon" href="assets/logo.png?v=24000">
+  <link rel="icon" type="image/png" href="assets/logo.png?v=28000">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=28000">
+  <link rel="shortcut icon" type="image/png" href="assets/logo.png?v=28000">
+  <link rel="apple-touch-icon" href="assets/logo.png?v=28000">
   
   <!-- Google Fonts: Space Mono & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css?v=27000">
+  <link rel="stylesheet" href="style.css?v=28000">
 </head>
 <body>
   <div id="site-loader" class="active">
@@ -90,60 +90,80 @@
   <!-- Media Section -->
   <section id="photos" class="section photos-section">
     <div class="container">
-      <div class="photos-grid media-grid-all">
-        <!-- Media Video 1 -->
-        <div class="photo-card glass-card media-card">
+      
+      <!-- Category Filter Pills -->
+      <div class="media-filter-bar">
+        <button class="media-filter-btn active" data-filter="all">ALL MEDIA</button>
+        <button class="media-filter-btn" data-filter="videos">VISUAL CLIPS</button>
+        <button class="media-filter-btn" data-filter="photos">PHOTOGRAPHY</button>
+      </div>
+
+      <!-- Editorial Masonry Grid -->
+      <div class="media-grid-creative">
+        <!-- Media Video 1 (Featured) -->
+        <div class="creative-card featured-video media-item" data-category="videos">
+          <span class="media-tag">// VISUAL CLIP 01</span>
           <video src="assets/media_video_1.mp4" autoplay muted loop playsinline controls class="media-video"></video>
         </div>
 
-        <!-- Media Video 2 -->
-        <div class="photo-card glass-card media-card">
-          <video src="assets/media_video_2.mp4" autoplay muted loop playsinline controls class="media-video"></video>
-        </div>
-
-        <!-- Photo Card 1 (Blue Durag & Hoodie Portrait) -->
-        <div class="photo-card glass-card media-card">
-          <img src="assets/artist_photo_1.jpg?v=27000" alt="TEA Portrait" class="media-img">
+        <!-- Photo Card 1 (Durag Portrait) -->
+        <div class="creative-card media-item" data-category="photos">
+          <span class="media-tag">// PORTRAIT 01</span>
+          <img src="assets/artist_photo_1.jpg?v=28000" alt="TEA Portrait" class="media-img">
         </div>
 
         <!-- Photo Card 2 (HCH Whiteboard) -->
-        <div class="photo-card glass-card media-card">
-          <img src="assets/artist_photo_2.jpg?v=27000" alt="HCH Hybrid Creative House Whiteboard" class="media-img">
+        <div class="creative-card media-item" data-category="photos">
+          <span class="media-tag">// STUDIO HCH</span>
+          <img src="assets/artist_photo_2.jpg?v=28000" alt="HCH Hybrid Creative House Whiteboard" class="media-img">
         </div>
 
-        <!-- Photo Card 3 (Night Street Traffic Light) -->
-        <div class="photo-card glass-card media-card">
-          <img src="assets/artist_photo_3.jpg?v=27000" alt="TEA Night Street Shot" class="media-img">
+        <!-- Media Video 2 (Featured) -->
+        <div class="creative-card featured-video media-item" data-category="videos">
+          <span class="media-tag">// VISUAL CLIP 02</span>
+          <video src="assets/media_video_2.mp4" autoplay muted loop playsinline controls class="media-video"></video>
         </div>
 
-        <!-- Photo Card 4 (Night Park Portrait) -->
-        <div class="photo-card glass-card media-card">
-          <img src="assets/artist_photo_4.jpg?v=27000" alt="TEA Outdoor Park Shot" class="media-img">
+        <!-- Photo Card 3 (Night Street) -->
+        <div class="creative-card media-item" data-category="photos">
+          <span class="media-tag">// NIGHT STREET</span>
+          <img src="assets/artist_photo_3.jpg?v=28000" alt="TEA Night Street Shot" class="media-img">
         </div>
 
-        <!-- Photo Card 5 (Blue LED Bench Portrait) -->
-        <div class="photo-card glass-card media-card">
-          <img src="assets/artist_photo_5.jpg?v=27000" alt="TEA Blue LED Bench Shot" class="media-img">
+        <!-- Photo Card 4 (Outdoor Park) -->
+        <div class="creative-card media-item" data-category="photos">
+          <span class="media-tag">// NIGHT PARK</span>
+          <img src="assets/artist_photo_4.jpg?v=28000" alt="TEA Outdoor Park Shot" class="media-img">
+        </div>
+
+        <!-- Photo Card 5 (Blue LED Bench) -->
+        <div class="creative-card media-item" data-category="photos">
+          <span class="media-tag">// BLUE ILLUMINATION</span>
+          <img src="assets/artist_photo_5.jpg?v=28000" alt="TEA Blue LED Bench Shot" class="media-img">
         </div>
 
         <!-- Photo Card 6 (Elevator Selfie Rock Sign) -->
-        <div class="photo-card glass-card media-card">
-          <img src="assets/artist_photo_6.jpg?v=27000" alt="TEA Elevator Selfie Rock Sign" class="media-img">
+        <div class="creative-card media-item" data-category="photos">
+          <span class="media-tag">// ELEVATOR SESSION 01</span>
+          <img src="assets/artist_photo_6.jpg?v=28000" alt="TEA Elevator Selfie Rock Sign" class="media-img">
         </div>
 
         <!-- Photo Card 7 (Full Body Elevator Selfie) -->
-        <div class="photo-card glass-card media-card">
-          <img src="assets/artist_photo_7.jpg?v=27000" alt="TEA Full Body Elevator Selfie" class="media-img">
+        <div class="creative-card media-item" data-category="photos">
+          <span class="media-tag">// ELEVATOR SESSION 02</span>
+          <img src="assets/artist_photo_7.jpg?v=28000" alt="TEA Full Body Elevator Selfie" class="media-img">
         </div>
 
         <!-- Photo Card 8 (Outdoor Stairs Sitting) -->
-        <div class="photo-card glass-card media-card">
-          <img src="assets/artist_photo_8.jpg?v=27000" alt="TEA Outdoor Stairs Shot" class="media-img">
+        <div class="creative-card media-item" data-category="photos">
+          <span class="media-tag">// URBAN STAIRS</span>
+          <img src="assets/artist_photo_8.jpg?v=28000" alt="TEA Outdoor Stairs Shot" class="media-img">
         </div>
 
         <!-- Photo Card 9 (Outdoor Garden Portrait) -->
-        <div class="photo-card glass-card media-card">
-          <img src="assets/artist_photo_9.jpg?v=27000" alt="TEA Garden Shot" class="media-img">
+        <div class="creative-card media-item" data-category="photos">
+          <span class="media-tag">// GARDEN LOOK</span>
+          <img src="assets/artist_photo_9.jpg?v=28000" alt="TEA Garden Shot" class="media-img">
         </div>
       </div>
     </div>
@@ -169,7 +189,32 @@
     </div>
   </footer>
 
-  <script src="main.js?v=27000"></script>
+  <script src="main.js?v=28000"></script>
+
+  <!-- Filter Pills JS script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const filterBtns = document.querySelectorAll(".media-filter-btn");
+      const mediaItems = document.querySelectorAll(".media-item");
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.getAttribute("data-filter");
+
+          mediaItems.forEach(item => {
+            if (filter === "all" || item.getAttribute("data-category") === filter) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  </script>
 
   <!-- Email Signup Modal -->
   <div class="email-modal-overlay" id="email-modal">
