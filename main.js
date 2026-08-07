@@ -26,9 +26,9 @@ const trackList = [
 
 // Photo Gallery Metadata
 const photosList = [
-  { src: "assets/vela_gallery_live.png", caption: "ECLIPSE Tour — Opening Night Live Performance (Japan)" },
-  { src: "assets/vela_gallery_portrait.png", caption: "Tea Editorial Cover Feature (Spectrum Magazine, Issue #42)" },
-  { src: "assets/vela_gallery_city.png", caption: "Visual research in Shibuya, Tokyo — Aesthetic Inspiration for ECLIPSE" }
+  { src: "assets/photo_stairs.jpg", caption: "Tea — Outdoor Stairs Editorial" },
+  { src: "assets/photo_bushes.jpg", caption: "Tea — Garden Style Outfit" },
+  { src: "assets/photo_elevator.jpg", caption: "Tea — Elevator Mirror Selfie" }
 ];
 
 // Video Ambient Canvas animation variables
@@ -737,8 +737,18 @@ window.addEventListener("DOMContentLoaded", () => {
   loadTrack(0);
 });
 
-// --- TEA LOGO CLICK SCREEN ---
+// --- SITE LOADER DISMISSAL ---
+const dismissLoader = () => {
+  const loader = document.getElementById("site-loader");
+  if (loader) {
+    loader.classList.remove("active");
+  }
+};
+document.addEventListener("DOMContentLoaded", dismissLoader);
+window.addEventListener("load", dismissLoader);
+setTimeout(dismissLoader, 300);
 
+// --- TEA LOGO CLICK SCREEN ---
 document.addEventListener("DOMContentLoaded", () => {
   const navLogo = document.getElementById("nav-logo");
   if (navLogo) {
@@ -773,21 +783,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if user has already seen or closed it
     let hasSeenPopup = false;
     try {
-      hasSeenPopup = localStorage.getItem("tea_email_popup_seen");
+      hasSeenPopup = sessionStorage.getItem("tea_email_session_seen");
     } catch (e) {
-      console.warn("localStorage not available, probably local file protocol.");
+      console.warn("Storage not available");
     }
 
-    if (true) { // Temporary override for testing
+    if (!hasSeenPopup) {
       setTimeout(() => {
         emailModal.classList.add("active");
+        try {
+          sessionStorage.setItem("tea_email_session_seen", "true");
+        } catch (e) {}
       }, 2000);
     }
 
     const closePopup = () => {
       emailModal.classList.remove("active");
       try {
-        localStorage.setItem("tea_email_popup_seen", "true");
+        sessionStorage.setItem("tea_email_session_seen", "true");
       } catch (e) {}
     };
 
