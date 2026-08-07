@@ -445,7 +445,7 @@ button, input, select, textarea {
   right: 0;
 }
 
-.mobile-nav { display: none !important; }
+
 
 .mobile-nav-link {
   font-family: var(--font-heading);
@@ -2465,7 +2465,7 @@ button, input, select, textarea {
 
 .video-bg-container, .video-overlay-tint { display: none !important; }
 
-.mobile-nav, .mobile-nav-link { display: none !important; }
+
 
 
 /* === MOBILE HAMBURGER TOGGLE RESTORATION === */
@@ -2512,4 +2512,29 @@ button, input, select, textarea {
     object-fit: contain !important;
     background: #0a0a0a !important;
   }
+}
+
+/* === RESTORED MOBILE NAV LINKS === */
+.mobile-nav {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 1.8rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.mobile-nav-link {
+  display: block !important;
+  font-family: var(--font-heading) !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary) !important;
 }
