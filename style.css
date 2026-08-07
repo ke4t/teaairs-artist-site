@@ -591,7 +591,8 @@ button, input, select, textarea {
 .release-cover {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #000000;
   border-radius: 12px;
   transition: transform 0.6s ease;
 }
@@ -601,12 +602,23 @@ button, input, select, textarea {
 }
 
 .mini-cover {
-  width: 78px;
-  height: 78px;
-  min-width: 78px;
+  width: 84px;
+  height: 84px;
+  min-width: 84px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  background: #000000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000000;
 }
 
 .release-badge {
