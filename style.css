@@ -331,9 +331,9 @@ button, input, select, textarea {
 
 #nav-logo img,
 .nav-logo-img {
-  height: 120px;
+  height: 156px;
   width: auto;
-  max-width: 320px;
+  max-width: 416px;
   object-fit: contain;
   display: block;
   transition: filter 0.3s ease, transform 0.3s ease;
