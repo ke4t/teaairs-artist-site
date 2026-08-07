@@ -2018,11 +2018,7 @@ button, input, select, textarea {
 }
 
 /* Custom procedural canvas video pulse */
-.ambient-canvas {
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, #1b0c3a 0%, #06020f 100%);
-}
+.ambient-canvas { display: none !important; }
 
 /* ==========================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
@@ -2470,3 +2466,5 @@ button, input, select, textarea {
     padding-right: 16px !important;
   }
 }
+
+.video-bg-container, .video-overlay-tint { display: none !important; }
