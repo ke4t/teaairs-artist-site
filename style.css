@@ -1,3 +1,5 @@
+/* REAL COMMIT V500 - 280PX MOBILE LOGO & 960PX CARDS */
+/* RELEASE BUILD v1000 - 280PX MOBILE LOGO */
 /* ==========================================================================
    VÉLA DESIGN SYSTEM & STYLESHEET
    Color Scheme: Mostly Purple & Dark Purple with Neon Violet/Pink Glows
@@ -327,7 +329,13 @@ button, input, select, textarea {
   text-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
 }
 
-#nav-logo img {
+#nav-logo img,
+.nav-logo-img {
+  height: 120px;
+  width: auto;
+  max-width: 320px;
+  object-fit: contain;
+  display: block;
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
@@ -574,7 +582,8 @@ button, input, select, textarea {
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
-  aspect-ratio: 1;
+  aspect-ratio: 9 / 16;
+  max-height: 580px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 20px 45px rgba(0,0,0,0.6);
@@ -1353,7 +1362,8 @@ button, input, select, textarea {
 
 .photo-card {
   position: relative;
-  aspect-ratio: 1;
+  aspect-ratio: 9 / 16;
+  max-height: 580px;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -1862,14 +1872,16 @@ button, input, select, textarea {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 4rem;
 }
 
 .footer-left {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.6rem;
   max-width: 400px;
 }
 
@@ -2271,6 +2283,7 @@ button, input, select, textarea {
   box-shadow: 0 0 15px var(--primary);
 }
 
+
 /* --- COMPREHENSIVE RESPONSIVE & BALANCED CARD SYSTEM --- */
 
 .glass-card,
@@ -2281,14 +2294,14 @@ button, input, select, textarea {
 .photo-card,
 .press-card,
 .email-modal-card {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: clamp(24px, 4vw, 48px);
-  border-radius: 20px;
-  border: 1px solid var(--glass-border);
-  box-sizing: border-box;
-  position: static;
+  width: 100% !important;
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding: clamp(24px, 4vw, 48px) !important;
+  border-radius: 20px !important;
+  border: 1px solid var(--glass-border) !important;
+  box-sizing: border-box !important;
+  position: static !important;
 }
 
 /* Desktop Buffer (≥1081px) */
@@ -2349,155 +2362,22 @@ button, input, select, textarea {
     box-sizing: border-box !important;
   }
 
-  .section {
-    padding: 2rem 0 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .section-title {
-    font-size: 1.8rem !important;
-    margin-bottom: 1rem !important;
-    word-break: break-word !important;
-  }
-
-  #nav-logo img, .nav-logo-img {
-    height: 36px !important;
-  }
-
-  .glass-card,
-  .release-card,
-  .player-card,
-  .bio-card,
-  .video-card,
-  .photo-card,
-  .email-modal-card {
-    width: 100% !important;
+  #nav-logo img,
+  .nav-logo-img {
+    height: 280px !important;
+    width: auto !important;
     max-width: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .footer-logo-img {
+    height: 240px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
     margin: 0 auto !important;
-    padding: clamp(20px, 4vw, 32px) !important;
-    border-radius: 16px !important;
-    box-sizing: border-box !important;
-  }
-
-  .player-section-grid,
-  .release-grid,
-  .bio-grid,
-  .videos-grid,
-  .photos-grid,
-  .press-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    gap: 1.5rem !important;
-    align-items: center !important;
-    box-sizing: border-box !important;
-  }
-
-  .release-card {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  .release-cover-wrapper {
-    width: 100% !important;
-    max-width: 160px !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    margin: 0 auto 1rem auto !important;
-    border-radius: 10px !important;
-    overflow: hidden !important;
-  }
-
-  .release-info {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    box-sizing: border-box !important;
-  }
-
-  .release-name {
-    font-size: 1.3rem !important;
-    margin-bottom: 0.3rem !important;
-    word-break: break-word !important;
-  }
-
-  .release-artist {
-    font-size: 0.85rem !important;
-  }
-
-  .streaming-links {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
-
-  .stream-btn {
-    width: 100% !important;
-    max-width: 240px !important;
-    justify-content: center !important;
-    padding: 0.6rem 1rem !important;
-    font-size: 0.85rem !important;
-    box-sizing: border-box !important;
-  }
-
-  .player-header {
-    width: 100% !important;
-    margin-bottom: 1.2rem !important;
-    padding-bottom: 0.6rem !important;
-  }
-
-  .player-now-playing {
-    width: 100% !important;
-    gap: 1rem !important;
-    margin-bottom: 1.2rem !important;
-  }
-
-  .mini-cover {
-    width: 44px !important;
-    height: 44px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .track-title {
-    font-size: 1rem !important;
-    word-break: break-word !important;
-  }
-
-  .player-controls-wrapper {
-    width: 100% !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  .player-time-info {
-    width: 100% !important;
-    gap: 0.6rem !important;
-    box-sizing: border-box !important;
-  }
-
-  .timeline-slider {
-    flex-grow: 1 !important;
-    width: 100% !important;
-  }
-
-  .waveform-container {
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .player-buttons {
-    width: 100% !important;
-    gap: 1.2rem !important;
-    justify-content: center !important;
-  }
-
-  .player-volume, .player-volume-wrapper {
-    display: none !important;
+    display: block !important;
   }
 
   .footer-container {
@@ -2509,17 +2389,22 @@ button, input, select, textarea {
     box-sizing: border-box !important;
   }
 
-  .footer-left, .footer-right {
-    width: 100% !important;
-    max-width: 100% !important;
+  .footer-left {
+    display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
-  .footer-logo-img {
-    height: 32px !important;
-    max-width: 140px !important;
-    margin: 0 auto !important;
+  .footer-right {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .footer-contact {
